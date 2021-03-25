@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
         android:text="Bienvenue dans l'activité 2"></TextView>
 
@@ -23,16 +23,5 @@
         android:layout_height="wrap_content"
         android:text="Test">
     </TextView>
-
-    <LinearLayout android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:gravity="center_vertical|center_horizontal">
-        <Button android:text="Quitter"
-            android:id="@+id/btnQuitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Button>
-    </LinearLayout>
 
 </LinearLayout>

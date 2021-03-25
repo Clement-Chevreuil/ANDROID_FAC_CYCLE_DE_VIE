@@ -23,12 +23,19 @@ public class SecondActivity extends AppCompatActivity {
 
         TextView shared = (TextView) findViewById(R.id.sharedRecup);
         SharedPreferences settings = getSharedPreferences("cycle_vie_prefs", Context.MODE_PRIVATE);
-        shared.setText(settings.getString("valeur", ""));
+        if (settings.getString("valeur","") != null  )
+        { shared.setText(settings.getString("valeur", "")); }
+        else
+        {
+            shared.setText("null");
+        }
+
 
         TextView inted = (TextView) findViewById(R.id.intedRecup);
         Intent inted2 = getIntent();
         String v="";
         if (inted2 != null) v=inted2.getStringExtra("clé") ;
+        else{v= "null"; }
         inted.setText(settings.getString("valeur", v));
         popUp("onCreate()");
     }
